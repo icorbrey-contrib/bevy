@@ -26,6 +26,7 @@ pub mod popover;
 mod radio;
 mod scrollbar;
 mod slider;
+mod spinbox;
 
 pub use button::*;
 pub use checkbox::*;
@@ -34,6 +35,7 @@ pub use observe::*;
 pub use radio::*;
 pub use scrollbar::*;
 pub use slider::*;
+pub use spinbox::*;
 
 use bevy_app::{PluginGroup, PluginGroupBuilder};
 use bevy_ecs::{entity::Entity, event::EntityEvent};
@@ -54,6 +56,7 @@ impl PluginGroup for UiWidgetsPlugins {
             .add(RadioGroupPlugin)
             .add(ScrollbarPlugin)
             .add(SliderPlugin)
+            .add(SpinboxPlugin)
     }
 }
 
